@@ -14,6 +14,12 @@ This repository uses a single-repo, subdirectory architecture to manage language
 ├── index.html        # Main English landing page (andesresilience.com)
 ├── es/
 │   └── index.html    # Spanish landing page ([andesresilience.com/es/](https://andesresilience.com/es/))
-├── assets/           # Shared production assets (Pico CSS, images, icons)
+└── static/           # Shared production assets (Pico CSS, images, icons)
+│   └── IMG
+│   │   └── hero.jpg
+│   │   └── favicon.png
+│   └── CSS
+│       └── custom.css
+│       └── pico.min.css
 └── README.md         # System documentation
 ```
