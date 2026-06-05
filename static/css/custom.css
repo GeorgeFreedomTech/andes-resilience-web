@@ -1,0 +1,84 @@
+/* Custom variables overriding Pico defaults */
+:root {
+    --pico-font-family: system-ui, -apple-system, "Segoe UI", Inter, Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Base structural limits */
+main.container {
+    max-width: 900px;
+}
+
+/* Sections within main */
+main > section {
+    margin-top: 5rem;
+}
+
+/* Navbar */
+nav.pico-text-align-center ul {
+    justify-content: center;
+    width: 100%;
+}
+
+/* Hero */
+header.hero-section {
+    background: url('../img/hero.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    --pico-color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+/* Articles */
+.grid article {
+    background-color: rgb(129, 133, 133);
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+}
+
+.grid article h3, 
+.grid article p {
+    --pico-color: #ffffff;
+}
+
+/* CTA action block + button */
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a[role="button"].btn-whatsapp {
+    --pico-primary: #04ad42;
+    --pico-primary-hover: #128C7E;
+    --pico-primary-background: #04ad42;
+    --pico-primary-border: #04ad42;
+    background-color: var(--pico-primary);
+    border-color: var(--pico-primary);
+}
+
+a[role="button"].btn-whatsapp:hover {
+    background-color: var(--pico-primary-hover);
+    border-color: var(--pico-primary-hover);
+}
+
+/* footer */
+main > footer {
+    margin-top: 4rem;
+    padding: 2rem 0; /* so its not at the bottom */
+    text-align: center;
+}
