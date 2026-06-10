@@ -41,7 +41,7 @@ This repository uses a single-repo, subdirectory architecture to manage language
 
 ## 📜 License:
 
-Copyright (c) 2025 Jiří Svoboda (George Freedom) / George Freedom Tech
+Copyright (c) 2026 Jiří Svoboda (George Freedom) / George Freedom Tech
 
 This project is licensed under:
 * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
