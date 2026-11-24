@@ -20,8 +20,10 @@ This repository uses a single-repo, subdirectory architecture to manage language
 
 ```text
 ├── index.html        # Main English landing page (andesresilience.com)
+├── cz/
+│   └── index.html    # Czech landing page 
 ├── es/
-│   └── index.html    # Spanish landing page ([andesresilience.com/es/](https://andesresilience.com/es/))
+│   └── index.html    # Spanish landing page 
 └── static/           # Shared production assets (Pico CSS, images, icons)
 │   └── IMG
 │   │   └── hero.jpg
