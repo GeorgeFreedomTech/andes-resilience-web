@@ -1,84 +1,174 @@
-/* Custom variables overriding Pico defaults */
+
+/* =========================================
+   BASE
+   Basic page settings and Pico CSS overrides
+   ========================================= */
+
 :root {
-    --pico-font-family: system-ui, -apple-system, "Segoe UI", Inter, Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    --pico-font-family: system-ui, -apple-system, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Base structural limits */
+/* Keep the reading area comfortable on wide screens */
 main.container {
-    max-width: 900px;
+    max-width: 760px;
 }
 
-/* Sections within main */
-main > section {
-    margin-top: 5rem;
-}
 
-/* Navbar */
-nav.pico-text-align-center ul {
-    justify-content: center;
-    width: 100%;
-}
+/* =========================================
+   HERO
+   Existing black-and-white Andes photograph
+   ========================================= */
 
-/* Hero */
-header.hero-section {
-    background: url('../img/hero.jpg') no-repeat center center;
-    background-size: cover;
-    min-height: 60vh;
+.hero-section {
+    position: relative;
+    min-height: 55vh;
+    padding: 3rem 1.5rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
-    padding: 2rem;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.40)),
+        url("../img/hero.jpg") center center / cover no-repeat;
 }
 
 .hero-content {
-    --pico-color: #ffffff;
-    font-size: 0.9rem;
+    color: #ffffff;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    letter-spacing: 0.1rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 750;
+    letter-spacing: 0.04em;
     margin-bottom: 1rem;
-    font-weight: 800;
 }
 
-/* Articles */
-.grid article {
-    background-color: rgb(129, 133, 133);
-    font-size: 0.75rem;
-    letter-spacing: 0.05rem;
+.hero-content p {
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
 }
 
-.grid article h3, 
-.grid article p {
+
+/* =========================================
+   LANGUAGE SWITCHER
+   EN / CZ / ES links in the top-right corner
+   ========================================= */
+
+.language-switcher {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 0.85rem;
+}
+
+.language-switcher a,
+.language-switcher span {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.language-switcher a {
+    opacity: 0.75;
+}
+
+.language-switcher a:hover,
+.language-switcher a[aria-current="page"] {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   CONTENT
+   Simple spacing and readable text
+   ========================================= */
+
+main > section {
+    margin-top: 3.5rem;
+}
+
+main > section h2 {
+    margin-bottom: 1.2rem;
+}
+
+main > section p {
+    max-width: 680px;
+}
+
+
+/* =========================================
+   AVAILABILITY
+   Current and future locations
+   ========================================= */
+
+#availability ul {
+    padding-left: 1.5rem;
+}
+
+
+/* =========================================
+   CONTACT
+   Direct contact without a booking system
+   ========================================= */
+
+.contact-actions {
+    margin-top: 1.5rem;
+}
+
+a.btn-whatsapp {
+    --pico-background-color: #128C4A;
+    --pico-border-color: #128C4A;
     --pico-color: #ffffff;
 }
 
-/* CTA action block + button */
-.cta-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a.btn-whatsapp:hover {
+    --pico-background-color: #0E733C;
+    --pico-border-color: #0E733C;
 }
 
-a[role="button"].btn-whatsapp {
-    --pico-primary: #04ad42;
-    --pico-primary-hover: #128C7E;
-    --pico-primary-background: #04ad42;
-    --pico-primary-border: #04ad42;
-    background-color: var(--pico-primary);
-    border-color: var(--pico-primary);
-}
 
-a[role="button"].btn-whatsapp:hover {
-    background-color: var(--pico-primary-hover);
-    border-color: var(--pico-primary-hover);
-}
+/* =========================================
+   FOOTER
+   Minimal footer at the bottom of the page
+   ========================================= */
 
-/* footer */
 main > footer {
     margin-top: 4rem;
-    padding: 2rem 0; /* so its not at the bottom */
+    padding: 1.5rem 0;
     text-align: center;
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   MOBILE
+   Adjust spacing and hero height on small screens
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        min-height: 45vh;
+    }
+
+    .language-switcher {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    main > section {
+        margin-top: 2.5rem;
+    }
 }
